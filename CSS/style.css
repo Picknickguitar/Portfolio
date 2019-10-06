@@ -1,0 +1,859 @@
+html
+{
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+
+body
+{
+	margin: 0;
+	font-family: lato;
+	color: #4d4d4f;
+}
+
+header
+{
+	display: none;
+}
+
+h1
+{
+	font-size: 80px;
+	margin-top: -30px;
+	margin-left: -5px;
+	font-family: titillium web;
+	margin-bottom: 0;
+}
+
+h2
+{
+	margin-top: 0;
+	font-family: titillium web;
+}
+
+main
+{
+	display: table;
+	width: 100%;
+}
+
+.seite
+{
+	height: 100vh;
+	display: table-row;
+	width: 100%;
+	background-color: #f2f2f2;
+}
+
+.clip
+{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	clip: rect(auto, auto, auto, auto);
+}
+
+.cell
+{
+	display: table-cell;
+	position: relative;
+	width: 100%;
+}
+
+/* Navigation ------------------------------------------------*/
+
+nav
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+nav ul
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	list-style: none;
+	margin-top: 0;
+	padding-left: 0;
+}
+
+nav li
+{
+	font-variant: small-caps;
+	padding: 4vh 0;	
+}
+
+.nav2 a
+{
+	text-decoration: none;
+	color: #222;
+	padding: 4vh 5vw;
+}
+
+#nav1 a.active
+{
+	background-color: rgba(255,255,255,0.5); 
+}
+
+.nav2 a.active
+{
+	background-color: rgba(0,0,0,0.5); 
+}
+
+/* FadeIn */
+
+#nav1 a
+{
+	text-decoration: none;
+	color: #eee;
+	padding: 4vh 5vw;
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-delay: 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+
+
+#nav1 li:nth-child(2) > a
+{
+	animation-delay: 1.4s;
+}
+
+#nav1 li:nth-child(3) > a
+{
+	animation-delay: 1.8s;
+}
+
+#nav1 li:nth-child(4) > a
+{
+	animation-delay: 2.2s;
+}
+
+#nav1 li:nth-child(5) > a
+{
+	animation-delay: 2.6s;
+}
+#nav1 li:nth-child(6) > a
+{
+	animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hover */
+
+#nav1 li:hover
+{
+	background-color: rgba(255,255,255,0.5); 
+}
+
+.nav2 li:hover
+{
+	background-color: rgba(204,204,204,0.5); 
+}
+
+
+/* Startseite -----------------------------------------------*/
+
+#home
+{
+	background: url(../bilder/c1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #eee;
+	overflow: hidden;
+}
+
+/* Headline */
+
+#firm
+{
+	position: relative;
+	left: 30vw;
+	top: 38vh;
+	opacity: 0;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	animation-name: fadeIn;
+	animation-duration: 2s;
+	animation-delay: 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+
+
+/* Linien Animation --------------------------------------------*/
+
+#square
+{
+	position: relative;
+	top: -38vh;
+	left: 2vw;
+}
+
+.navline
+{
+	position: absolute;
+	top: 0;
+	right: -2px;
+	width: 2px;
+	height: 100%;
+}
+
+.path
+{
+	stroke-dasharray: 3000;
+	stroke-dashoffset: 3000;
+	animation: dash 3s linear 1s forwards;
+}
+
+@keyframes dash 
+{
+  to 
+  {
+    stroke-dashoffset: 0;
+  }
+}
+
+.navpath
+{
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	animation: dash 5s linear 1s forwards;
+}
+
+@keyframes dash 
+{
+  to 
+  {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Über Uns ----------------------------------------------*/
+
+#we
+{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.text
+{
+	box-sizing: border-box;
+	text-align: center;
+	width: 41vw;
+	height: 100vh;
+	padding: 0vw 5vw;
+	position: relative;
+}
+
+#uber
+{
+	text-align: center;
+}
+
+#uber img
+{
+	position: relative;
+	top: 5vh;
+}
+
+#wir
+{
+	background: url(../bilder/2ba.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 39vw;
+	height: 100vh;
+}
+
+/* Webseiten----------------------------------------------*/
+
+.webimages div:nth-child(1)
+{
+	grid-area: web1;
+	background: url(../bilder/websites/1.jpg);
+	background-size: 100% 200%;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(1):hover
+{
+	transform: scale(1.2, 2.4);
+	background: url(../bilder/websites/1.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*-----------------------------------------------------------*/
+.webimages div:nth-child(2)
+{
+	grid-area: web2;
+	background: url(../bilder/websites/2.jpg);
+	background-size: 200% 100%;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(2):hover
+{
+	transform: scale(2.2, 1.2);
+	background: url(../bilder/websites/2.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*-------------------------------------------------------------*/
+.webimages div:nth-child(3)
+{
+	grid-area: web3;
+	background: url(../bilder/websites/3.jpg);
+	background-size: 200% 100%;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(3):hover
+{
+	transform: scale(2.2, 1.2);
+	background: url(../bilder/websites/3.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------*/
+.webimages div:nth-child(4)
+{
+	grid-area: web4;
+	background: url(../bilder/websites/4.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(4):hover
+{
+	transform: scale(1.2, 1.2);
+	background: url(../bilder/websites/4.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------*/
+.webimages div:nth-child(5)
+{
+	grid-area: web5;
+	background: url(../bilder/websites/5.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(5):hover
+{
+	transform: scale(1.2, 1.2);
+	background: url(../bilder/websites/5.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------*/
+.webimages div:nth-child(6)			/* h2 */
+{
+	grid-area: sites;
+}
+/*--------------------------------------------------------------*/
+.webimages div:nth-child(7)
+{
+	grid-area: web6;
+	background: url(../bilder/websites/6.png);
+	background-size: 200% 100%;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(7):hover
+{
+	transform: scale(2.2, 1.2);
+	background: url(../bilder/websites/6.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------*/
+.webimages div:nth-child(8)
+{
+	grid-area: web7;
+	background: url(../bilder/websites/7.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(8):hover
+{
+	transform: scale(2.2, 2.2);
+	background: url(../bilder/websites/7.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------*/
+.webimages div:nth-child(9)
+{
+	grid-area: web8;
+	background: url(../bilder/websites/8.png);
+	background-size: 100% 200%;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(9):hover
+{
+	transform: scale(1.2, 2.4);
+	background: url(../bilder/websites/8.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------*/
+.webimages div:nth-child(10)
+{
+	grid-area: web9;
+	background: url(../bilder/websites/9.jpg);
+	background-size: 200% 100%;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(10):hover
+{
+	transform: scale(2.2, 1.2);
+	background: url(../bilder/websites/9.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------*/
+.webimages div:nth-child(11)
+{
+	grid-area: web10;
+	background: url(../bilder/websites/10.jpg);
+	background-size: 100% 200%;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(11):hover
+{
+	transform: scale(1.2, 2.4);
+	background: url(../bilder/websites/10.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------*/
+.webimages div:nth-child(12)
+{
+	grid-area: web11;
+	background: url(../bilder/websites/11.png);
+	background-size: 100% 200%;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(12):hover
+{
+	transform: scale(1.2, 2.4);
+	background: url(../bilder/websites/11.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------*/
+.webimages div:nth-child(13)
+{
+	grid-area: web12;
+	background: url(../bilder/websites/12.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(13):hover
+{
+	transform: scale(2.2, 2.2);
+	background: url(../bilder/websites/12.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------*/
+.webimages div:nth-child(14)
+{
+	grid-area: web13;
+	background: url(../bilder/websites/13.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(14):hover
+{
+	transform: scale(2.2, 2.2);
+	background: url(../bilder/websites/13.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------*/
+.webimages div:nth-child(15)
+{
+	grid-area: web14;
+	background: url(../bilder/websites/14.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.webimages div:nth-child(15):hover
+{
+	transform: scale(2.2, 2.2);
+	background: url(../bilder/websites/14.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------*/
+.webimages h2
+{
+	position: relative;
+	left: 70%;
+	line-height: 15vh;
+	margin-bottom: 0;
+	
+}
+
+.webimages
+{
+	box-sizing: border-box;
+	height: 100%;
+	width: 100vw;
+	display: grid;
+	justify-content: end;
+	padding-top: 12vh;
+	padding-right: 10vw;
+	grid-template-columns: repeat(6, 12%);
+	grid-template-rows: repeat(5, 17%);
+	grid-template-areas: 
+	" web1 web1 web5 web5 web9 web12 "
+	" web2 web3 web5 web5 web9 web13 "
+	" web2 web3 sites sites web10 web10 "
+	" web4 web4 web6 web7 web11 web11 "
+	" web4 web4 web6 web8 web8 web14 "
+	;
+}
+
+.webimages div
+{
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+	transition: all 0.3s ease-in-out;
+}
+
+.webimages div:after
+{
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
+	transition: opacity 0.3s ease-in-out;
+}
+
+.webimages div:hover
+{
+	transform: scale(1.2, 1.2);
+}
+
+.webimages div:hover::after
+{
+	opacity: 1;
+}
+
+/* Corporate Design-------------------------------------*/
+
+#cd
+{
+	position: relative;
+	text-align: center;
+	padding: 10vh 10vw;
+	display: grid;
+	grid-template-columns: repeat(3, 25%);
+	grid-template-rows: repeat(3, 29%);
+	grid-column-gap: 1%;
+	grid-row-gap: 2%;
+	height: 90vh;
+	left: 17vw;
+}
+
+/* Flip Animation---------------------------------------*/
+
+.card
+{
+	position: relative;
+	perspective: 1000px;
+}
+
+.card-inner
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 3px 6px 20px 0px rgba(0,0,0,0.7);
+}
+
+.card:hover .card-inner 
+{
+	transform: rotateY(180deg);
+	box-shadow: 3px 6px 20px 0px rgba(0,0,0,0.7);
+}
+
+/*Karte 1 ------------------------------------------------------------------------*/
+.card-front1, .card-back1
+{
+	position: absolute;
+	backface-visibility: hidden;
+	height: 100%;
+	width: 100%;
+}
+.card-front1
+{
+	background-image: url(../bilder/visitenkarten/cardfrontebe.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.card-back1
+{
+	background-image: url(../bilder/visitenkarten/cardbackebe.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transform: rotateY(180deg);
+}
+
+/*Karte 2 ------------------------------------------------------------------------*/
+.card-front2, .card-back2
+{
+	position: absolute;
+	backface-visibility: hidden;
+	height: 100%;
+	width: 100%;
+}
+.card-front2
+{
+	background-image: url(../bilder/visitenkarten/cardbackbev.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.card-back2
+{
+	background-image: url(../bilder/visitenkarten/cardfrontbeV.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transform: rotateY(180deg);
+}
+
+/*Karte 3 ------------------------------------------------------------------------*/
+.card-front3, .card-back3
+{
+	position: absolute;
+	backface-visibility: hidden;
+	height: 100%;
+	width: 100%;
+}
+.card-front3
+{
+	background-image: url(../bilder/visitenkarten/cardfrontthecomp.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.card-back3
+{
+	background-image: url(../bilder/visitenkarten/cardbackthecomp.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transform: rotateY(180deg);
+}
+
+/*Karte 4 ------------------------------------------------------------------------*/
+.card-front4, .card-back4
+{
+	position: absolute;
+	backface-visibility: hidden;
+	height: 100%;
+	width: 100%;
+}
+.card-front4
+{
+	background-image: url(../bilder/visitenkarten/cardfrontlorem.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.card-back4
+{
+	background-image: url(../bilder/visitenkarten/cardbacklorem.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transform: rotateY(180deg);
+}
+
+/*Karte 5 ------------------------------------------------------------------------*/
+.card-front5, .card-back5
+{
+	position: absolute;
+	backface-visibility: hidden;
+	height: 100%;
+	width: 100%;
+}
+.card-front5
+{
+	background-image: url(../bilder/visitenkarten/cardfrontkast.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.card-back5
+{
+	background-image: url(../bilder/visitenkarten/cardbackkast.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transform: rotateY(180deg);
+}
+
+/*Karte 6 ------------------------------------------------------------------------*/
+.card-front6, .card-back6
+{
+	position: absolute;
+	backface-visibility: hidden;
+	height: 100%;
+	width: 100%;
+}
+.card-front6
+{
+	background-image: url(../bilder/visitenkarten/cardfrontblack.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.card-back6
+{
+	background-image: url(../bilder/visitenkarten/cardbackblack.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transform: rotateY(180deg);
+}
+
+/*Karte 7 ------------------------------------------------------------------------*/
+.card-front7, .card-back7
+{
+	position: absolute;
+	backface-visibility: hidden;
+	height: 100%;
+	width: 100%;
+}
+.card-front7
+{
+	background-image: url(../bilder/visitenkarten/cardfrontpink.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.card-back7
+{
+	background-image: url(../bilder/visitenkarten/cardbackpink.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transform: rotateY(180deg);
+}
+
+/*Karte 8 ------------------------------------------------------------------------*/
+.card-front8, .card-back8
+{
+	position: absolute;
+	backface-visibility: hidden;
+	height: 100%;
+	width: 100%;
+}
+.card-front8
+{
+	background-image: url(../bilder/visitenkarten/cardfrontsud.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.card-back8
+{
+	background-image: url(../bilder/visitenkarten/cardbacksud.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transform: rotateY(180deg);
+}
+/* Karte mit Überschrift---------------------------------------------------------------*/
+.card2
+{
+	position: relative;
+	perspective: 1000px;
+}
+
+.card-inner2
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.card-frontS
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.card2 h2
+{
+	line-height: 27vh;
+	position: relative;
+	margin-bottom: 0;
+}
+
+/* Kontakt-------------------------------------------------------------*/
+
+.kontakt
+{	
+	position: relative;
+	left: 20.5vw;
+	width: 78vw;
+	text-align: center;
+}
+
+iframe
+{
+	
+	width: 78vw;
+	height: 33vh;
+	border: 0;
+}
+
+/* Drucker-------------------------------------------------------*/
+
+@media print 
+{
+	#home, #web, #corpDes, #contact, #imp, #wir
+	{
+		display: none;
+	}
+	
+	#we
+	{
+		justify-content: center;
+	}
+	
+	.text
+	{
+		width: 100%;
+	}
+	
+	nav
+	{
+		display: none;
+	}
+	
+	.class, #we, .text
+	{
+		height: initial;
+	}
+	
+	.clip
+	{
+		clip: initial;
+	}
+}
