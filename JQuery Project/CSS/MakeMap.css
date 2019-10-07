@@ -1,0 +1,188 @@
+body
+{
+	margin: 0;
+	color: #fefefe;
+	font-family: 'Pirata One', cursive;
+}
+
+/*Navigation mit Hamburger -----------------------------------------*/
+
+nav
+{
+	height:60px; 
+	line-height:60px;
+	right: 0;
+	position: fixed;
+	z-index: 99;
+}
+
+.hamburger
+{
+	background: none;
+	position:absolute;
+	top:0;
+	right:0;
+	line-height:45px;
+	padding:5px 15px 0px 15px;
+	color:#efefef;
+	border:0;
+	font-size:1.6em;
+	font-weight:bold;
+	cursor:pointer;
+	outline:none;
+	z-index:99;
+}
+
+.cross
+{
+    background:none;
+    position:absolute;
+	top:0px;
+	right:5px;
+	padding:7px 15px 0px 15px;
+	color:#efefef;
+	border:0;
+	font-size:2.5em;
+	line-height:55px;
+	font-weight:bold;
+	cursor:pointer;
+	outline:none;
+	z-index:99;
+}
+
+.menu
+{
+	z-index:50;  
+	width:10vw; 
+	background:#D97B3F;  
+	position:absolute; 
+	text-align:center; 
+	font-size:32px;
+	position: fixed;
+	right: 0;
+	height: 100vh;
+	font-variant: small-caps;
+}
+
+.menu ul 
+{
+	position: relative;
+	top: 60px;
+	margin: 0; 
+	padding: 0; 
+	list-style-type: none; 
+	list-style-image: none;
+}
+.menu li 
+{
+	display: block;   
+	padding:15px 0 15px 0; 
+	cursor: pointer;
+}
+.menu li:hover
+{   
+	background:#DEB15D;
+}
+
+
+/* Main seite -------------------------------------------------------*/
+
+main
+{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+}
+
+h3
+{
+	font-size: 20px;
+}
+
+#map
+{
+	position: relative;
+	left: 15vw;
+}
+
+#map div:hover
+{
+	outline: 1px solid black;
+    outline-offset: -1px;
+}
+
+aside
+{
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 15vw;
+	background-color: #D97B3F;
+	padding: 0 2vh;
+	text-align: center;
+}
+
+#items
+{
+	display: grid;
+	grid-template-columns: repeat(1, 95%);
+	grid-template-rows: repeat(6, 15%);
+}
+
+.sidemenu
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #DEB15D;
+	padding: 7px 7px 0px 7px;
+}
+
+.sidemenu img
+{
+	height: 7vh;
+	width: 7vh;	
+	margin-bottom: 7px;
+}
+
+/* Zoom Buttons -------------------------------------------------*/
+
+#zoom
+{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	top: 80px;
+	right: 20px;
+}
+
+#zoom button
+{
+	background-color: #D97B3F;
+	margin-bottom: 15px;
+	border: none;
+	height: 30px;
+	width: 30px;
+	color: #fefefe;
+	font-size: 15px;
+}
+
+/*Login------------------------------------------------------------*/
+
+#login
+{
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+}
+
+#login img
+{
+	height: 50px;
+	cursor: pointer;	
+}

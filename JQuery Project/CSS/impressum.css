@@ -1,0 +1,113 @@
+body
+{
+	margin: 0;
+}
+
+nav ul
+{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	margin: 0;
+	line-height: 8vh;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+nav
+{
+	text-align: center;
+	background-color: #D97B3F;
+}
+
+nav li
+{   
+	padding:15px 0 15px 0; 
+}
+
+nav a:hover
+{
+	background-color: #DEB15D;
+}
+
+nav a
+{
+	text-decoration:none; 
+	color:#efefef;
+	margin: 0px; 
+	width: 35%;
+}
+
+main
+{
+	background-image: url("../img/oldpaper.jpg");
+	background-size: cover;
+	background-repeat: repeat;
+	font-family: 'Pirata One', cursive;
+	text-align: center;
+	padding: 50px 100px;
+	box-sizing: border-box;
+	-moz-user-select: none;
+	-webkit-user-select: none
+	user-select: none;
+}
+
+.impressum img
+{
+	height: 250px;
+	margin-left: 150px;
+	margin-top: -150px;
+	position: relative;
+	left: 30vw;
+}
+
+.signature
+{
+	font-family: 'Mrs Saint Delafield', cursive;
+	font-size: 120px;
+	position: relative;
+	top: 50px;
+	right: 150px;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none
+}
+
+.signature2
+{
+	font-family: 'Mrs Saint Delafield', cursive;
+	font-size: 120px;
+	position: relative;
+	top: -10vh;
+	right: 150px;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	
+}
+
+.datenschutz img
+{
+	height: 250px;
+	margin-left: 150px;
+	margin-top: -150px;
+	margin-bottom: -30vh;
+	position: relative;
+	left: 30vw;
+	top: -50vh;
+}
+
+.tabs
+{
+	display: none;
+}
+
+.current
+{
+	background-color: #DEB15D;
+}
+
+.about
+{
+	height: 70vh;
+}

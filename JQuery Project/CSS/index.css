@@ -1,0 +1,218 @@
+body
+{
+	margin: 0;
+	overflow-x: hidden;
+	font-family: 'Pirata One', cursive;
+}
+
+li
+{
+	color: #fefefe;
+	text-decoration: none;
+	text-shadow:3px 3px 4px #222;
+}
+
+main
+{
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../img/bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+aside
+{
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 50px;
+	text-align: center;
+}
+
+aside img
+{
+	height: 50px;
+	margin-bottom: -20px;
+	cursor: pointer;
+}
+
+aside p
+{
+	font-size: 20px;
+}
+
+nav
+{
+	position: absolute;
+	z-index: 300;
+	right: 20px;
+	top: 20px;
+	font-size: 50px;
+	font-variant: small-caps;
+	color: #fefefe;
+	text-align: right;
+	width: 25vw;
+	height: 20vh;
+}
+
+nav ul
+{
+	list-style-type: none;
+}
+
+nav li
+{
+	cursor: pointer;
+}
+
+nav li:nth-of-type(1)
+{
+	position: absolute;
+	right: -400px;
+}
+nav li:nth-of-type(2)
+{
+	position: absolute;
+	right: -400px;
+	top: 140px;
+}
+nav li:nth-of-type(3)
+{
+	position: absolute;
+	right: -400px;
+	top: 220px;
+}
+nav li:nth-of-type(4)
+{
+	position: absolute;
+	right: -400px;
+	top: 300px;
+}
+nav li:nth-of-type(5)
+{
+	position: absolute;
+	right: -400px;
+	top: 380px;
+}
+nav li:nth-of-type(6)
+{
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 140px;
+}
+
+/*-Registrierung-------------------------------------------------------------*/
+
+.anmeldeFenster
+{
+	display: none;
+    position: fixed;
+    z-index: 400;
+    left: 0;
+    top: 0;
+    width: 100%;
+	height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+	
+}
+
+.anmeldeFenster h2
+{
+	margin-top: 0;
+	font-family: 'Mrs Saint Delafield';
+	font-size: 60px;
+}
+
+.anmeldeFenster input[type=text], .regis input[type=password] 
+{
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 26px;
+    display: block;
+    border: none;
+    box-sizing: border-box;
+	font-size:16px;
+	font-family: 'Pirata One';
+}
+
+.anmeldeFenster button 
+{
+    background-color: #8B435F;
+    color: #FBFAEB;
+    padding: 14px 20px;
+    margin: 8px 26px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+	font-size:20px;
+	font-family: 'Pirata One';
+}
+
+.anmeldeFenster button:hover 
+{
+    opacity: 0.8;
+}
+
+.anmeldeFenster a
+{
+	text-decoration:none; 
+	float:right; 
+	margin-right:40px; 
+}
+
+.regis
+{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	background-image: url(../img/oldpaper.jpg);
+	margin: 0 auto 0 auto;
+    width: 60%; 
+	padding: 30px 0;
+	position: relative;
+	top: 15vh;
+}
+
+.loginfenster
+{
+	float: left;
+	width: 49%;
+	text-align: center;
+	border-right: 1px solid #222;
+}
+
+.loginfenster h2
+{
+	margin-top: 46px;
+}
+.regisfenster
+{
+	float: right;
+	width: 49%;
+	text-align: center;
+}
+
+.close 
+{
+	position: relative;
+    margin-left: 25vw;
+    top: -25px;
+    color: #ae0000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,.close:focus 
+{
+    color: red;
+    cursor: pointer;
+}
+
+.fehlerL, .fehlerR
+{
+	display: none;
+	color: red;
+}
